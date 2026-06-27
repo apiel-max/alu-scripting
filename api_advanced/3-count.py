@@ -8,7 +8,7 @@ def count_words(subreddit, word_list, counts={}, after=None):
     if not counts:
         counts = {word.lower(): 0 for word in word_list}
     url = "https://www.reddit.com/r/{}/hot.json?limit=100".format(subreddit)
-    headers = {"User-Agent": "Mozilla/5.0 (custom bot)"}
+    headers = {"User-Agent": "linux:myredditapp:v1.0 (by /u/yourusername)"}
     params = {"after": after} if after else {}
     response = requests.get(url, headers=headers, allow_redirects=False,
                             params=params)
